@@ -1,16 +1,7 @@
-function getRandomNumber( upper ) {
-    var randomNumber = Math.floor( Math.random() * upper ) + 1; 
-      return randomNumber;
-  }
-  
-  console.log(getRandomNumber(6));
-  console.log(getRandomNumber(49));
-  console.log(getRandomNumber(100));
-  console.log(getRandomNumber(50));
-  
-  function getArea(width, length, unit) {
-    var area = width * length;
-       return area + " " + unit;
-  }
-  
-  console.log(getArea(10, 20, 'sqr ft'));
+function getRandomNumber(lower, upper) {
+  return Math.floor( Math.random() * (upper - lower + 1 )) + lower; //because the formula produces a value you could simply return the value(all a return statement does is return a value and it doesn't matter where that value comes from, it can be stored in a variable, but can also return a value from a function.
+}
+
+alert(getRandomNumber(30, 20));
+alert(getRandomNumber(40, 50));
+console.log(getRandomNumber(50, 100));
